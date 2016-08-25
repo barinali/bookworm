@@ -1,0 +1,40 @@
+.nav {
+  &--site {
+    border: 1px solid $border-color;
+    border-left: 0;
+    border-right: 0;
+    height: 45px;
+    margin-bottom: 30px;
+    width: 100%;
+
+    a {
+      border: 1px solid $border-color;
+      border-top: 0;
+      border-bottom: 0;
+      display: block;
+      float: left;
+      height: 45px;
+      font-weight: 700;
+      line-height: 45px;
+      padding: 0 30px;
+
+      &:hover {
+        background: rgba(0, 0, 0, .05);
+      }
+
+      + a {
+        border-left: 0;
+      }
+
+      &.add-book {
+        border-left: 1px solid $border-color;
+        float: right;
+
+        &:hover {
+          background-color: rgba(55, 200, 255, 1);
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

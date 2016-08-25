@@ -1,0 +1,70 @@
+.header {
+  &--site {
+    @extend .clearfix;
+    margin: 0 auto 10px auto;
+    width: $container-width;
+  }
+}
+
+.logo {
+  &--site {
+    // I love this color.
+    color: #00adef;
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100px;
+    height: 100px;
+    text-align: center;
+    transition: color .3s;
+    width: 200px;
+    will-change: color;
+
+    h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    &:hover {
+      color: #000000;
+    }
+  }
+}
+
+.search-box {
+  font-size: 16px;
+  line-height: 50px;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 50px;
+  width: 100%;
+
+  &:before {
+    content: '\27A4';
+    position: absolute;
+    color: black;
+  }
+
+  &__wrapper {
+    float: right;
+    margin-top: 25px;
+    position: relative;
+    width: 375px;
+  }
+
+  &__submit {
+    background: transparent;
+    border: 0;
+    bottom: 0;
+    line-height: 40px;
+    padding-right: 15px;
+    padding-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import '_normalize';
+@import '_variables';
+@import '_header';
+@import '_nav';
+@import '_book';
+
+// these * lines are for making everything easier during writing scss
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+a {
+  transition: all .3s;
+  will-change: auto;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, .8);
+}
+
+[contenteditable]:hover {
+  background-color: rgba(55, 200, 255, .5);
+  cursor: pointer;
+}
+
+// Actually, this rule and its property is a bad UX.
+// But for now, I don't want to show outline on my elements.
+*:focus {
+  outline: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+body {
+  background: rgba(0, 0, 0, .007);
+  font: 14px Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: $container-width;
+}
+
+.footer {
+  &--site {
+    border-top: 1px solid $border-color;
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    padding: 20px 30px;
+    position: absolute;
+    right: 0;
+  }
+}

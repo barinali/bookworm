@@ -1,0 +1,59 @@
+.book {
+  &--list {
+
+  }
+
+  &--item {
+    border: 1px solid $border-color;
+    padding: 30px 20px;
+
+    + .book--item {
+      margin-top: 20px;
+    }
+  }
+
+  &__header {
+    @extend .clearfix;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    float: left;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  &__author {
+    float: right;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__footer {
+    text-align: right;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 10px 20px;
+
+    + .book__button {
+      margin-left: 5px;
+    }
+
+    &--edit {
+      background: rgba(250, 250, 50, 1);
+    }
+
+    &--delete {
+      color: #ffffff;
+      background: rgba(200, 50, 50, 1);
+    }
+
+    &--save {
+      background: rgba(50, 250, 250, 1);
+    }
+  }
+}
